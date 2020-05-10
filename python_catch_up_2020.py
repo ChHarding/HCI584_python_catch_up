@@ -7,8 +7,10 @@
 
 
 # basic data types (bools, numbers, strings lists, tuples, dictionaries, sets) 
+    # creation and conversions (float(), str(), etc.
     # for strings and lists: indexing and slices
-    #   
+    # mention general functions like min, max, len, copy
+    # range() and zip()
 
 
 # numpy
