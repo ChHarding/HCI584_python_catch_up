@@ -2,9 +2,10 @@
 # Each topic will get its own jupyter notebook)
 
 # variables
-    # local vs "global"
+    # variables vs literal values
     # assignments: copy vs alias
-    # names: the more important the longer  
+    # local vs "global" (scope)
+    # names: the more important the longer they should be  
 
 # basic data types (bools, numbers, strings lists, tuples, dictionaries, sets) 
     # creation and conversions (float(), str(), etc.
@@ -34,6 +35,9 @@
     # mention general functions like min, max, len, copy
     # return value vs in-place change
 
+# documentation
+    # doc strings
+    # comments
 
 # OOP
 
@@ -47,3 +51,5 @@
 # internet
 
 
+# recommended practices
+    # have only one action per line, for easy debugging and easier read 
