@@ -4,11 +4,12 @@
 # variables
     # local vs "global"
     # assignments: copy vs alias
-
+    # names: the more important the longer  
 
 # basic data types (bools, numbers, strings lists, tuples, dictionaries, sets) 
     # creation and conversions (float(), str(), etc.
     # for strings and lists: indexing and slices
+    # immutable data types
     # mention general functions like min, max, len, copy
     # range() and zip()
 
