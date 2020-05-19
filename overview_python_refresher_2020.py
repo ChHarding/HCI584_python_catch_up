@@ -5,7 +5,7 @@
     # variables vs literal values
     # assignments: copy vs alias
     # local vs "global" (scope)
-    # names: the more important the longer they should be  
+    # names: the more important the longer the name should be  
 
 # basic data types (bools, numbers, strings lists, tuples, dictionaries, sets) 
     # creation and conversions (float(), str(), etc.
