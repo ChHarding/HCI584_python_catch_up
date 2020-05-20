@@ -23,6 +23,7 @@
         - type 'python` and hit enter
         - you'll see `>>>`, which means the interpreter is waiting for you to type in a line of code (interactive python shell)
         - type `print('hello)'  , then hit return
+        - your line is interpreted, the result is shown and it's again ready for another line.
         - this is useful if you want to play around or test something
         - to exit the interactive shell, type `exit()`
 <br/>
