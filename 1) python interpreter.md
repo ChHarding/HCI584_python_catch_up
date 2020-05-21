@@ -2,7 +2,13 @@
 
 <sup>(Note for Chris: run md preview with Control-Shift-v with Markdown Preview Enhanced VS Plugin)</sup>
 
+- We'll use Python 3 (3.7) for this class
+- Python 2 is now no longer supported, but there's still a lot of Python 2 code around
+- You (usually) cannot simply run python 2 .py files in Python 3
+- Biggest obvious difference: Python 2: `print "hello"` (statement) vs Python 3: `print("hello")` (function)  
+- It's pretty easy to convert Python 2 code to Python 3 either manually or with the `2to3` commandline tool
 
+<br/>
 - python is interpreted
 - you need a python interpreter installed to run any python code
 - if you installed anaconda, the python interpreter executable ("app") is anaconda3/python.exe (win) or anaconda/bin/python (mac) 
