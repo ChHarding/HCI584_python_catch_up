@@ -67,6 +67,21 @@ print(random.randint(10, 20)) # random in between 10 and 20
 help(random.randint)  # shows info about name,  help(random.randint()) <- NO ()
 
 #
+# Bools (HCI574 lecure 6)
+#
+
+# Used for boolean evaluations and true/false flags in general
+a = True
+b = False
+
+i1 = 4
+i2 = 2
+b = i1 > 2 # is i1 bigger than 2? True/False
+print(b) 
+print(i1 == i2) # is i1 the same value as i2?
+print("th" in "Monty Python") # does string contain "th" soemwhere?
+
+#
 # Strings
 # HCI574 lecture 4
 #
@@ -117,3 +132,219 @@ print(s, s[0:3], s[2:5])
 print(s[2: ]) # end index is blank, not 0!
 print(s[-4:-1]) # can use negative numbers, still left:right!
 print(s[1:-1]) # or mix them
+
+# index and slicing gives you a copy!
+c = s[0:3]
+s = "different string" # new content, old content is gone
+print(c,s)
+
+# Strings are immutable
+# you cannot directly manipulate a string!
+s[0:9] = "Another" # error: 'str' object does not support item assignment
+del s[0] # I want to delete the fist char but this also won't work
+
+
+# String manipulation - despite immutability
+# in general: get a copy and minupulate that, then overwrite the original string
+
+# delete the first char in s
+s = s[1: ] # make a slice and re-assign!
+print(s) # the old s is gone but the effect is that the first char was "deleted"
+
+# remove last 4 chars from filename
+s = "somefile.txt"
+s = s[:-4]
+print(s) 
+
+# String methods https://www.w3schools.com/python/python_ref_string.asp
+print(s.upper(), s) # print a uppercasified copy, s was NOT changed
+s = "This is a line with a few words in it"
+l = s.split() # split into list of words defined by spaces (whitespace, incl. \t and \n)
+print(l)
+print("-".join(l)) # join list into string with - between words
+
+# gluing strings together (concatenation)
+s2 = s + ", and that's just fine!"
+print(s2)
+
+# empty strings are legal and useful
+s = "" # empty for now, ready to add chars later
+s += "adding "
+s += "words "
+s += "together "
+print(s)
+
+
+# str() converts to a string
+i = 77
+f = 12.34
+s = "item #" + str(i) + " is worth $" + str(f) 
+print(s)
+
+
+# string formatting (https://realpython.com/python-f-strings/)
+# HCI 574 lecture 10
+money = 100
+name = "Chris"
+print(f"Hey {name}, you owe us ${money}!")
+
+# print()
+# takes multiple args, comma separated, of any type
+# will convert each arg to string and separates them by a space
+print("item #", i, " is worth $", f) # compar| to above!
+# sep arg defines what char(s) to use for separation
+print("item #", i, " is worth $", f, sep ="")
+# use end="" to supress new line
+# print can also print into opened files
+
+# regular expressions (regex), pattern matching
+# HCI 574 lecture 26 (https://regex101.com)
+
+
+
+#
+# Lists (HCI574 lecture 7)
+#
+
+# sequence of elements (any type of object)
+l = [1, "two", 3.0, "FOUR"]
+print(l)
+
+# index and slices work the same as for strings
+print(l[0], l[-1], l[1:-1])
+
+# lists are mutable, so you CAN overwrite elements
+l[0] = "START"
+l[1:3] = [2, 3]
+print(l)
+
+# lists can be nested, i.e. another list can be an element
+l[-1] = ["another", "list", -999, 12314.45354,] # overwrite last element with list
+print(l)
+# regular nested lists can be matrices or tables
+m = [ 
+      [1, 2],
+      [3, 4]
+    ]
+
+t = [ 
+      ["year", "income"],
+      [2003,    231423],
+      [2004,    334223],
+      [2005,     98424],   # it's OK to have a superfluous , at the end
+    ]
+
+#  Python also has numpy for proper arrays and dataframes for proper tables (later)
+
+# list() makes a list of chars from a string
+print(list("Monty Python"))
+
+
+# grow lists
+l = [1, "two", 3.0, "FOUR"]
+l = [0] + l + [5, "six"]  # pre nd append lists with +
+print(l) # note that you need to make a 1 element list from the 0! 
+
+# empty lists
+l = []
+l.append(1)  # quick way to append a single new element (change-in-place method!)
+l.append(["x", "y"]) # append a 2 element (sub) list
+print(l)
+# More list methods: https://www.w3schools.com/python/python_ref_list.asp
+
+# list comprehension (but advanced!)
+l = ["Monty", "Pythonista's", "fly-catching", "Circus"]
+len_lst = [len(e) for e in l] # make a lists of lengths foe each element in l
+print(l)
+print(len_lst)
+
+len_combo_lst = [[len(e), e] for e in l] # combo list for length and string
+print(len_combo_lst)
+
+# sort sublists: 
+sl = sorted(len_combo_lst, reverse=True)
+print(sl)
+# Whats the longest word?
+print(sl[0][1], "is longest with", sl[0][0], "chars")
+
+
+#
+# Tuples and Sets
+#
+
+# Tuples a immutable lists (constant)
+t = (1,2)
+t[0] = 999 # won't work, can't change tuple elements
+t = 1,2  # short for (1,2)
+print(t)
+t = 1,  # single element tuple (gotcha warning)
+print(t)
+
+
+# Sets are list with guaranteed unique elements
+s1 = set([3,2,3,2,1,2,1,1,1,1,2,0])
+s2 = set([2,3,4,3,4,5,6,0,2,4,4])
+
+# sets have no order, they always appear(1) to be sorted
+print(s1, s2) # note the { } to show it's not a list (it's not a dictionary!)
+
+# set operations https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset
+print(s1.intersection(s2)) # which elements occur in BOTH lists?
+
+
+
+#
+# Dictionaries (dicts)  HCI 574 lecture 8
+#
+
+# dicts are bags of key-value-pairs   key:value
+# bag => does not have the concept of order, despite appearing to be sorted (like sets)
+# key needs to be immutable, typically a string is used
+# keys act like an index but with a string instead of a number# 
+
+chris = {}  # empty dict
+chris["name"] = "Harding" # add a new key and assign value
+chris["height_cm"] = 184
+
+bob = {"name":"Bobbington", "height_cm": 174}
+print(chris, bob)
+
+# update/overwrite value for existing key
+bob["height_cm"] = 172
+
+# add new key
+bob["height_inch"] = round(bob["height_cm"] / 2.54, 2)
+print(bob)
+
+# conversion to list
+print(bob.keys()) # list of all keys, note its a special list type dict_keys
+keys = list(bob.values()) # list of all values, converted to normal list
+print(keys)
+print(list(bob.items())) # list of key, value tuples
+
+# these lists are NOT connected to its dict anymore
+keys[0] = "NAME WAS CHANGED!"
+print(keys, bob)
+
+# make dict from list of "pairs"
+anne = [["name","Albright"], ["height_inch", 5.5]]
+print(anne)
+
+
+#
+# None
+#
+
+# special value, not a Bool
+# sometimes use to indicate a "failure" without rasing a exception (error)
+
+# print() doesn't return anything but this is NOT an error
+r = print("bla") 
+print(r) 
+
+# Gotcha!
+l = [1,2,3]
+l.append(4) # append() returns None
+print(l)
+l = l.append(5) # easy mistake to make!
+print(l) # what happend?
