@@ -14,7 +14,7 @@ print(int(123.456)) # int() truncates floats
 print(int("123"))    # or converts a string with a valid integer into an int
 print(int("123.456")) # error: "123.456" is not a valid integer string
 # there's no comma allowed in large ints
-print(1,000) # "works" b/c 1,000 is a shortcut to (1,000) which is a tuple
+print(1000) # "works" b/c 1,000 is a shortcut to (1,000) which is a tuple
 
 # decimal numbers (floating point numbers or floats)
 # floats ALWAYS have a decimal point!
@@ -67,7 +67,7 @@ print(random.randint(10, 20)) # random in between 10 and 20
 help(random.randint)  # shows info about name,  help(random.randint()) <- NO ()
 
 #
-# Bools (HCI574 lecure 6)
+# Bools (HCI574 lecture 6)
 #
 
 # Used for boolean evaluations and true/false flags in general
@@ -79,7 +79,7 @@ i2 = 2
 b = i1 > 2 # is i1 bigger than 2? True/False
 print(b) 
 print(i1 == i2) # is i1 the same value as i2?
-print("th" in "Monty Python") # does string contain "th" soemwhere?
+print("th" in "Monty Python") # does string contain "th" somewhere?
 
 #
 # Strings
@@ -101,16 +101,18 @@ a = 3
 print(a)
 b = a + 4
 '''
+
 # special characters 
 # start with \
 # \n = new line (line break)
 # \t = tab
 print("1\t2\t3\n4.0\t-4\t234")
 
+
 # indexing
 # way to get a single char from a string
 # first letter has index 0 ! (not 1)
-s = "abc"
+s = "bacASdsa3da"
 print(s[0])
 print(s[3]) # index out of range, the index of c is 2!
 
@@ -161,11 +163,14 @@ print(s.upper(), s) # print a uppercasified copy, s was NOT changed
 s = "This is a line with a few words in it"
 l = s.split() # split into list of words defined by spaces (whitespace, incl. \t and \n)
 print(l)
-print("-".join(l)) # join list into string with - between words
+print("-*-".join(l)) # join list into string with - between words
 
 # gluing strings together (concatenation)
 s2 = s + ", and that's just fine!"
 print(s2)
+
+############################
+
 
 # empty strings are legal and useful
 s = "" # empty for now, ready to add chars later
@@ -184,16 +189,16 @@ print(s)
 
 # string formatting (https://realpython.com/python-f-strings/)
 # HCI 574 lecture 10
-money = 100
+money = 1000
 name = "Chris"
 print(f"Hey {name}, you owe us ${money}!")
 
 # print()
 # takes multiple args, comma separated, of any type
 # will convert each arg to string and separates them by a space
-print("item #", i, " is worth $", f) # compar| to above!
+print("item #", i, " is worth $", f) # compare to above!
 # sep arg defines what char(s) to use for separation
-print("item #", i, " is worth $", f, sep ="")
+print("item #", i, " is worth $", f, sep="")
 # use end="" to supress new line
 # print can also print into opened files
 
@@ -242,7 +247,7 @@ print(list("Monty Python"))
 
 # grow lists
 l = [1, "two", 3.0, "FOUR"]
-l = [0] + l + [5, "six"]  # pre nd append lists with +
+l = [0] + l + [5, "six"]  # pre and append lists with +
 print(l) # note that you need to make a 1 element list from the 0! 
 
 # empty lists
@@ -306,7 +311,7 @@ chris = {}  # empty dict
 chris["name"] = "Harding" # add a new key and assign value
 chris["height_cm"] = 184
 
-bob = {"name":"Bobbington", "height_cm": 174}
+bob = {"name":"Bobbington", "height_cm":174}
 print(chris, bob)
 
 # update/overwrite value for existing key
@@ -318,8 +323,8 @@ print(bob)
 
 # conversion to list
 print(bob.keys()) # list of all keys, note its a special list type dict_keys
-keys = list(bob.values()) # list of all values, converted to normal list
-print(keys)
+values = list(bob.values()) # list of all values, converted to normal list
+print(values)
 print(list(bob.items())) # list of key, value tuples
 
 # these lists are NOT connected to its dict anymore
@@ -327,7 +332,7 @@ keys[0] = "NAME WAS CHANGED!"
 print(keys, bob)
 
 # make dict from list of "pairs"
-anne = [["name","Albright"], ["height_inch", 5.5]]
+anne = dict([["name","Albright"], ["height_inch", 5.5]])
 print(anne)
 
 

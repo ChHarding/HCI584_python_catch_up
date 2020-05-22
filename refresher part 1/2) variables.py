@@ -37,7 +37,7 @@ print(a,b,c)
 L1 = [1,2,3] # list (mutable)
 print(hex(id(L1)), L1)
 
-# assigning an existsing variable name to a different variable creates an alias to the same mem. obj.
+# assigning an existing variable name to a different variable creates an alias to the same mem. obj.
 L2 = L1
 print(hex(id(L2)), L2) # same address
 
