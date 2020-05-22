@@ -11,7 +11,7 @@ May 22, 2020
 - (If you've forked the repo, you could ofc push your modifications ... but I don't see the need for this)
 
 
-- For the next lectures, I will add more folders (part 2, etc.) to my github repo and you will again have to clone it again to get the updated version.
+- For the next lectures, I will add more folders (part 2, etc.) to my github repo.
 - This may introduce conflicts with the version you have now. If you want to be sure not to loose any modifications you made you could use git to resolve them. 
 - However, it may be easier to just copy your modified part 1 folder into your HCI584 folder directly, delete this HCI584_python_refresher repo from your local drive and re-clone it again.
 
