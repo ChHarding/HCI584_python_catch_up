@@ -103,3 +103,6 @@ print(size_num * 12.3) # do do math we need to use a number, not the string!
 # simply indicated via all uppercase names 
 GRAVITY = 9.81
 
+
+# add:
+# _ is valid and useful
