@@ -3,7 +3,10 @@
 - This contains a set of follow along .py anf jupyter files for HCI 584
 - The refresher is structured to have multiple parts, one for each lecture
 
-May 27: 2020:
+May 29, 2020:
+- added part 4: file i/o, pandas+numpy, plotting
+
+May 27, 2020:
 - added part 3: modules and functions
 
 May 25, 2020:
