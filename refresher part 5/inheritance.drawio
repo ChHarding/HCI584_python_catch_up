@@ -1,0 +1,43 @@
+<mxfile host="" modified="2020-06-03T22:47:22.325Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.45.1 Chrome/78.0.3904.130 Electron/7.2.4 Safari/537.36" etag="kjM5c0ERUg6Gba1b_vwP" version="13.1.3">
+    <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+        <mxGraphModel dx="526" dy="523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="WIyWlLk6GJQsqaUBKTNV-0"/>
+                <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0"/>
+                <mxCell id="-NLDWEVMoD6Hmidl6ecA-0" value="Person Class" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="50" y="320" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="-NLDWEVMoD6Hmidl6ecA-1" value="name (string)&#10;age (number)&#10;_pets_owned (list)&#10;set_age()&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="-NLDWEVMoD6Hmidl6ecA-0" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="-NLDWEVMoD6Hmidl6ecA-6" value="Worker Class" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="50" y="140" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="-NLDWEVMoD6Hmidl6ecA-7" value="name (string)&#10;age (number)&#10;_pets_owned (list)&#10;salary (NEW)&#10;set_age()&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="-NLDWEVMoD6Hmidl6ecA-6" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="-NLDWEVMoD6Hmidl6ecA-8" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;endFill=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;shadow=1;strokeWidth=5;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-NLDWEVMoD6Hmidl6ecA-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="370" as="sourcePoint"/>
+                        <mxPoint x="210" y="220" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="210" y="370"/>
+                            <mxPoint x="300" y="370"/>
+                            <mxPoint x="300" y="220"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="-NLDWEVMoD6Hmidl6ecA-9" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;Base Class &lt;/font&gt;" style="resizable=0;html=1;align=left;verticalAlign=bottom;labelBackgroundColor=#ffffff;fontSize=10;" parent="-NLDWEVMoD6Hmidl6ecA-8" connectable="0" vertex="1">
+                    <mxGeometry x="-1" relative="1" as="geometry">
+                        <mxPoint y="17.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="-NLDWEVMoD6Hmidl6ecA-10" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;Specialized sub class&lt;/font&gt;" style="resizable=0;html=1;align=left;verticalAlign=bottom;labelBackgroundColor=#ffffff;fontSize=10;" parent="-NLDWEVMoD6Hmidl6ecA-8" connectable="0" vertex="1">
+                    <mxGeometry x="1" relative="1" as="geometry">
+                        <mxPoint x="0.5" y="-10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
