@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Xkcd thumbnails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      .container {
+        max-width: 500px;
+        padding-top: 100px;
+      }
+      img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+      }
+      img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <form class="form-inline" action="/" method="get">
+          <label >Showing {{num_thumbs}} Xkcd thumbnails:</label>
+          <button type="submit" class="btn btn-primary mb-2" >Back to Start Page</button>
+        </form><br>
+
+        {% for img_url in url_list %}
+            <a target="_blank" href= "{{img_url}}">
+                <img src= "{{img_url}}" style="width:150px ">
+            </a>
+        {% endfor %}
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

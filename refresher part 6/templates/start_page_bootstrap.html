@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Template Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      .container {
+        max-width: 500px;
+        padding-top: 100px;
+      }
+      img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+      }
+      img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <form class="form-inline" action="/show_thumbs/" method="get">
+            <label for="num_imgs" class="mr-sm-2">How many random images?</label>
+            <div class="col-xs-2">
+                <input type="text" class="form-control" placeholder=10 name="num_imgs" id="num_imgs">
+            </div>
+                <button type="submit" class="btn btn-primary mb-2" >Show me!</button>
+            <textarea class="form-control" rows="2" placeholder="Any comments?" name="comment" id="comment"></textarea>
+        </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
